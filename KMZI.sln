@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMZI", "KMZI\KMZI.csproj", "{AB9F1A1D-B959-43E5-A483-E4288C69E109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2", "Lab2\Lab2.csproj", "{D4EF691B-B2DB-4813-9839-146A065576DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB9F1A1D-B959-43E5-A483-E4288C69E109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9F1A1D-B959-43E5-A483-E4288C69E109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9F1A1D-B959-43E5-A483-E4288C69E109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9F1A1D-B959-43E5-A483-E4288C69E109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4EF691B-B2DB-4813-9839-146A065576DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4EF691B-B2DB-4813-9839-146A065576DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4EF691B-B2DB-4813-9839-146A065576DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4EF691B-B2DB-4813-9839-146A065576DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C262B7F6-AC53-4FFA-9805-5E2CCCD33C5D}
+	EndGlobalSection
+EndGlobal
