@@ -5,12 +5,58 @@ using System.Text;
 using System.Threading.Tasks;
 using Lab2;
 using Lab3;
+using Lab5;
+using System.Numerics;
 
 namespace KMZI
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            DiffieHellman dh = new DiffieHellman();
+            Random rnd = new Random();
+
+            // 1. Alice and Bob generate random 128-bit numbers.
+            BigInteger a = dh.GenerateRandomNumber(rnd);
+            BigInteger b = dh.GenerateRandomNumber(rnd);
+            Console.WriteLine("Alice's secret key: " + a);
+            Console.WriteLine("Bob's secret key: " + b);
+
+            // 2a. Also an open prime number P is being generated.
+            int p = 340412687;
+            Console.WriteLine("Random prime key: " + p);
+
+            // 2b. Another number is being generated which is a primitive root modulo p.
+            int g = 7;
+            Console.WriteLine("Primitive root: " + g);
+
+            // 3. Alice and Bob generate open keys using open parameters and their numbers.
+            BigInteger A = dh.DiscreteExp(g, a, p);
+            BigInteger B = dh.DiscreteExp(g, b, p);
+            Console.WriteLine("Alice's open key: " + A);
+            Console.WriteLine("Bob's open key: " + B);
+
+            // 4. Open keys are being exchanged.
+
+            // 5. Alice and Bob calculate common key using open key of each other and own closed keys.
+            BigInteger K1 = dh.DiscreteExp(B, a, p);
+            BigInteger K2 = dh.DiscreteExp(A, b, p);
+
+            if (K1 == K2)
+                Console.WriteLine("Keys are equal: " + K1 + ", " + K2);
+
+            Console.ReadKey();
+        }
+
+        public void DHProtocol()
+        {
+            DiffieHellman dh = new DiffieHellman();
+            Random rnd = new Random();
+
+        }
+
+        public void ShowLab3()
         {
             NumberTheory nt = new NumberTheory();
             long n = 101398751;
@@ -49,5 +95,6 @@ namespace KMZI
 
             Console.ReadKey();
         }
+      
     }
 }

@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB9F1A1D-B959-43E5-A483-E4288C69E109}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>KMZI</RootNamespace>
-    <AssemblyName>KMZI</AssemblyName>
+    <ProjectGuid>{FA3A3553-BA7F-49AD-B151-5912FF5B9FAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lab5</RootNamespace>
+    <AssemblyName>Lab5</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,25 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="DiffieHellman.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Lab2\Lab2.csproj">
-      <Project>{d4ef691b-b2db-4813-9839-146a065576de}</Project>
-      <Name>Lab2</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lab3\Lab3.csproj">
-      <Project>{c65eb943-bb8a-4576-905b-2956831a9bc5}</Project>
-      <Name>Lab3</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lab5\Lab5.csproj">
-      <Project>{fa3a3553-ba7f-49ad-b151-5912ff5b9faa}</Project>
-      <Name>Lab5</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
