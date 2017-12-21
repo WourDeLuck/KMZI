@@ -7,12 +7,29 @@ using Lab2;
 using Lab3;
 using Lab5;
 using System.Numerics;
+using System.IO;
+using Lab1;
 
 namespace KMZI
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            RandomSequences rs = new RandomSequences();
+
+            // Random sequence
+            Console.WriteLine("Creating first file...");
+            rs.GenerateRandomSequence("Seq1");
+
+            // Pseudo random sequence
+            Console.WriteLine("Creating second file...");
+            rs.PseudorandomSequence("Seq2");
+
+            Console.ReadKey();
+        }
+
+        public void DHProtocol()
         {
             DiffieHellman dh = new DiffieHellman();
             Random rnd = new Random();
@@ -45,15 +62,10 @@ namespace KMZI
 
             if (K1 == K2)
                 Console.WriteLine("Keys are equal: " + K1 + ", " + K2);
+            else
+                throw new ArgumentException("The keys are not equal.");
 
             Console.ReadKey();
-        }
-
-        public void DHProtocol()
-        {
-            DiffieHellman dh = new DiffieHellman();
-            Random rnd = new Random();
-
         }
 
         public void ShowLab3()
